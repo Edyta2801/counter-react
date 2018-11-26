@@ -4,10 +4,11 @@ class Counter extends React.Component {
     state = {
         number: this.props.startNumber || 0
     }
-    incHandler = () => this.setState({ number: this.setState + 1 })
-    decHandler = () => this.setState({ number: this.setState11 })
-    incFiveHandler = () => this.setState({ number: this.setState + 5 })
-    decFiveHandler = () => this.setState({ number: this.setState - 5 })
+    incHandler = () => this.setState({ number: this.state.number + 1 })
+    decHandler = () => this.setState({ number: this.state.number-1 })
+    incFiveHandler = () => this.setState({ number: this.state.number + 5 })
+    decFiveHandler = () => this.setState({ number: this.state.number - 5 })
+    resetCounter = () => this.setState({ number: this.props.startNumber || 0 })
     render() {
         return (
             <div>

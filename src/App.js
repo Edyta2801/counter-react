@@ -3,7 +3,8 @@ import Counter from './Counter'
 
 const App=()=>(
   <Counter
-  startNumber={5}
+  startNumber={0}
   />
 )
-export default App;
+
+export default App
