@@ -2,27 +2,33 @@ import React from 'react'
 
 class Counter extends React.Component {
     state = {
-        number: 0
+        number: this.props.startNumber || 0
     }
+    incHandler = () => this.setState({ number: this.setState + 1 })
+    decHandler = () => this.setState({ number: this.setState11 })
+    incFiveHandler = () => this.setState({ number: this.setState + 5 })
+    decFiveHandler = () => this.setState({ number: this.setState - 5 })
     render() {
         return (
             <div>
                 <h1>
                     {this.state.number}
                 </h1>
-                <button>
+                <button
+                    onClick={this.incHandler}>
                     +1
                 </button>
-                <button>
+                <button
+                    onClick={this.decHandler}>
                     -1
                 </button>
-                <button>
+                <button onClick={this.incFiveHandler}>
                     +5
                 </button>
-                <button>
+                <button onClick={this.decFiveHandler}>
                     -5
                 </button>
-                <button>
+                <button onClick={this.resetCounter}>
                     reset
                 </button>
             </div>
