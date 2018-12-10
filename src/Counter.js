@@ -10,11 +10,11 @@ class Counter extends React.Component {
         this.saveInLocalStorage()
     }
 
-    saveInLocalStorage = () => localStorage.setItem(
+    saveInLocalStorage = () => {localStorage.setItem(
         'state-counter',
         JSON.stringify(this.state)
 
-    )
+    )}
 
 
 
